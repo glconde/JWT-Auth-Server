@@ -96,6 +96,44 @@ nodemon server.js
 }
 ```
 
+## Using Postman for API Requests
+
+### 1. Register a User
+
+- Open Postman.
+- Set the request type to `POST`.
+- Enter `http://localhost:3000/register` as the request URL.
+- Go to the `Body` tab, select `raw`, and choose `JSON` format.
+- Enter the following JSON:
+
+```json
+{
+  "username": "testuser",
+  "password": "testpassword"
+}
+```
+
+- Click `Send`.
+- You should receive a success message.
+
+### 2. Login a User
+
+- Open Postman.
+- Set the request type to `POST`.
+- Enter `http://localhost:3000/login` as the request URL.
+- Go to the `Body` tab, select `raw`, and choose `JSON` format.
+- Enter the following JSON:
+
+```json
+{
+  "username": "testuser",
+  "password": "testpassword"
+}
+```
+
+- Click `Send`.
+- You should receive a token in the response.
+
 ## Troubleshooting
 
 ### 1. MongoDB Connection Issues
