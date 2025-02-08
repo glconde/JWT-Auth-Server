@@ -36,8 +36,8 @@ PORT=3000
 ```
 
 - Replace `your_secret_key` with a strong secret key.
-- Ensure MongoDB is running locally on port `27017`, or update the `MONGO_URI` accordingly.\
-- Replace DB, COLLECTION and PORT accordingly. PORT pertains to server port not MongoDB.
+- Ensure MongoDB is running locally on port `27017`, or update the `MONGO_URI` accordingly.
+- Replace `DB`, `COLLECTION`, and `PORT` accordingly. `PORT` pertains to the server port, not MongoDB.
 
 ### 4. Start the Server
 
@@ -96,6 +96,55 @@ nodemon server.js
 }
 ```
 
+### Update User
+
+**PUT** `/user/:id`
+
+#### Headers
+
+```json
+{
+  "Authorization": "Bearer your_jwt_token"
+}
+```
+
+#### Request Body (JSON)
+
+```json
+{
+  "username": "newusername",
+  "password": "newpassword"
+}
+```
+
+#### Response (Success)
+
+```json
+{
+  "message": "User updated successfully"
+}
+```
+
+### Delete User
+
+**DELETE** `/user/:id`
+
+#### Headers
+
+```json
+{
+  "Authorization": "Bearer your_jwt_token"
+}
+```
+
+#### Response (Success)
+
+```json
+{
+  "message": "User deleted successfully"
+}
+```
+
 ## Using Postman for API Requests
 
 ### 1. Register a User
@@ -133,6 +182,34 @@ nodemon server.js
 
 - Click `Send`.
 - You should receive a token in the response.
+
+### 3. Update a User
+
+- Open Postman.
+- Set the request type to `PUT`.
+- Enter `http://localhost:3000/user/:id` as the request URL (replace `:id` with the actual user ID).
+- Go to the `Headers` tab and add `Authorization: Bearer your_jwt_token`.
+- Go to the `Body` tab, select `raw`, and choose `JSON` format.
+- Enter the following JSON:
+
+```json
+{
+  "username": "newusername",
+  "password": "newpassword"
+}
+```
+
+- Click `Send`.
+- You should receive a success message.
+
+### 4. Delete a User
+
+- Open Postman.
+- Set the request type to `DELETE`.
+- Enter `http://localhost:3000/user/:id` as the request URL (replace `:id` with the actual user ID).
+- Go to the `Headers` tab and add `Authorization: Bearer your_jwt_token`.
+- Click `Send`.
+- You should receive a success message.
 
 ## Troubleshooting
 
