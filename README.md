@@ -13,7 +13,7 @@ Before running the server, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/glconde/CPRG303-Assignment2-Auth.git
+git clone https://github.com/glconde/JWT-Auth-Server.git
 cd CPRG303-Assignment2-Auth
 ```
 
