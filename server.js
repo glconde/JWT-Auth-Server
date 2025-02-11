@@ -42,7 +42,7 @@ const authenticateToken = (req, res, next) => {
     res.status(403).json({ message: "Invalid token" });
   }
 };
-a;
+
 // sign-up
 app.post("/register", async (req, res) => {
   try {
