@@ -14,7 +14,7 @@ Before running the server, ensure you have the following installed:
 
 ```bash
 git clone https://github.com/glconde/JWT-Auth-Server.git
-cd CPRG303-Assignment2-Auth
+cd JWT-Auth-Server
 ```
 
 ### 2. Install Dependencies
